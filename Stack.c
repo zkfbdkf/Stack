@@ -17,7 +17,7 @@ int get_a_cmd()
 int push(int *stack)
 {
 	if (Top >= 5)//full check
-	printf("The Stack is full, no more input\n");
+	printf("The Stack is full, no more input.\n");
 	else
 	{
 		printf("Input the number.\n");
