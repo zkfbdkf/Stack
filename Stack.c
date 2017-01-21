@@ -6,14 +6,14 @@
 #define QUIT 4
 
 #define SIZE 5
-int Top = 0;
+int Top = 0;//Top
 
 int get_a_cmd()
 {
-	int n;
+	int cmd;
 	printf("Select Order.\n1.Input number in the Stack.\n2.Delete number from the Stack.\n3.Show numbers in the Stack.\n4.Quit.\n");
-	scanf_s("%d", &n);
-	return n;
+	scanf_s("%d", &cmd);
+	return cmd;
 }
 
 int push(int *stack)
@@ -25,7 +25,7 @@ int push(int *stack)
 		printf("Input the number.\n");
 		scanf_s("%d", &stack[Top]);
 		printf("The number has been input in the Stack.\n");
-		Top++;
+		Top++;//Top move
 		return stack[Top];
 	}
 }
@@ -33,19 +33,19 @@ int push(int *stack)
 
 void pop(int *stack)
 {
-	if (Top <= 0)
+	if (Top <= 0)//empty ckeck
 	printf("The Stack is empty, no more delete.\n");
 	else
 	{
 		printf("The number has been deleted.\n");
-		Top--;
+		Top--;//Top move
 	}
 }
 
 void show(int *stack)
 {
 	int i = 0;
-	if (Top <= 0)
+	if (Top <= 0)//empty check
 	printf("The Stack is empty.\n");
 	else
 	{
