@@ -4,6 +4,8 @@
 #define DELETE 2
 #define SHOW 3
 #define QUIT 4
+
+#define SIZE 5
 int Top = 0;
 
 int get_a_cmd()
@@ -16,7 +18,7 @@ int get_a_cmd()
 
 int push(int *stack)
 {
-	if (Top >= 5)//full check
+	if (Top >= SIZE)//full check
 	printf("The Stack is full, no more input.\n");
 	else
 	{
@@ -58,7 +60,7 @@ void show(int *stack)
 int main()
 {
 	int cmd;
-	int stack[5];
+	int stack[SIZE];
 	do
 	{
 		cmd = get_a_cmd();
